@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #dddddd;
+        }
+    </style>
+</head>
+<body>
+등록 되었습니다!
+<table>
+    <tr>
+        <td>단축 url </td>
+        <td th:text="${shortened}"> haha.ha/pap</td>
+    </tr>
+    <tr>
+        <td>원래 url</td>
+        <td th:text="${origUrl}"> www.naver.com </td>
+    </tr>
+    <tr>
+        <td>생성 일시</td>
+        <td th:text="${createdAt}"> 지금!</td>
+    </tr>
+</table>
+</body>
+</html>
